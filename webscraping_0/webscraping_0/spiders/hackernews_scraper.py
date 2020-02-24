@@ -9,12 +9,12 @@ from uuid import uuid4
 
 class HackernewsScraperSpider(scrapy.Spider):
     name = 'hackernews_scraper'
-    allowed_domains = ['https://news.ycombinator.com/']
-    start_urls = ['https://news.ycombinator.com//']
+    allowed_domains = ['news.ycombinator.com']
+    start_urls = ['https://news.ycombinator.com/']
 
     def parse(self, response):
         print("\n\tPROCESSING\n\t\tTHE\n\t\t   WEBSITE")
-        post_links = response.xpath("//td[@class='title']/a/@href").extract()
+        post_links = response.xpath("//a[@class='storylink']/@href").extract()
         post_titles = response.css("a.storylink::text").extract()
         
         zipped_entities = zip(post_titles,post_links)
@@ -25,10 +25,11 @@ class HackernewsScraperSpider(scrapy.Spider):
             item['title'] = i[0]
             item['link'] = i[1]
             yield item
+        
 
-
+#if __name__ == '__main__':
 process = CrawlerProcess(get_project_settings())
 scheduler = TwistedScheduler()
-scheduler.add_job(process.crawl, 'interval', args=[HackernewsScraperSpider], seconds=10)
+scheduler.add_job(process.crawl, 'interval', args=[HackernewsScraperSpider], seconds=20)
 scheduler.start()
 process.start(False)
