@@ -1,5 +1,5 @@
 # Scrapy-Django-NewsScraper
-Using Scrapy to read information off of web page and populate it in Django Database. Current Webpage is `news.ycombinator.com` Hackernews website. I am trying to find a best way to make sure how I dont miss information. Right now Scrapy checks first page for addition of content, every 20 seconds and another spider that goes 14 page deep to extract link and headline of news. Current version extracts news headline and link to it. Using UUID to identify each news so search with complexity of O(1) is achieved.
+Using Scrapy to read information off of web page and populate it in Django Database. Current Webpage is `news.ycombinator.com` Hackernews website. I am trying to find a best way to make sure how I dont miss information. Right now Scrapy checks first page for addition of content, every 10 seconds and another spider that goes 14 page deep to extract link and headline of news. Current version extracts news headline and link to it. Using UUID to identify each news so search with complexity of O(1) is achieved.
 
 Scrapy pipeline is connected to Django Database. 
 
