@@ -10,7 +10,7 @@ To use this,
   <li>Create a virtual environment.</li>
   <li>Install requirements.</li>
   <li>Go to Scrapy project folder.</li>
-  <li>Run: scrapy crawl hackernews_scraper</li>
+  <li>Run: `scrapy crawl hackernews_scraper`</li>
   <li>Observe Magic</li>
 </ol>
 
