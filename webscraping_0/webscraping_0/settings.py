@@ -28,7 +28,7 @@ BOT_NAME = 'webscraping_0'
 SPIDER_MODULES = ['webscraping_0.spiders']
 NEWSPIDER_MODULE = 'webscraping_0.spiders'
 
-DEPTH_LIMIT = 14
+DEPTH_LIMIT = 2
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'webscraping_0 (+http://www.yourdomain.com)'

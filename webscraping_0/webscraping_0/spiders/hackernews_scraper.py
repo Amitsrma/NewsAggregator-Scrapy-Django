@@ -27,9 +27,9 @@ class HackernewsScraperSpider(scrapy.Spider):
             yield item
         
 
-#if __name__ == '__main__':
-process = CrawlerProcess(get_project_settings())
-scheduler = TwistedScheduler()
-scheduler.add_job(process.crawl, 'interval', args=[HackernewsScraperSpider], seconds=20)
-scheduler.start()
-process.start(False)
+if __name__ == '__main__':
+    process = CrawlerProcess(get_project_settings())
+    scheduler = TwistedScheduler()
+    scheduler.add_job(process.crawl, 'interval', args=[HackernewsScraperSpider], seconds=20)
+    scheduler.start()
+    process.start(False)
