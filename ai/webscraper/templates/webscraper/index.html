@@ -1,0 +1,10 @@
+
+{% if scraped_info_list %}
+    <ul>
+    {% for info in scraped_info_list %}
+        <li><a href="/polls/{{ info.id }}/">{{ question.question_text }}<br></a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No scraped info are available.</p>
+{% endif %}
