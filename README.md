@@ -17,7 +17,7 @@ To use this,
       <code>python manage.py migrate</code> <br>
       <code>python manage.py createsuperuser</code> and put credentials so you can login into admin account <br>
       <code>python manage.py runserver</code> to start Django server </p></li>
-  <li>Open another command prompt, activate virtual environment and go to Scrapy project folder inside ai <code>/ai/webscraping_0<code></li>
+  <li>Open another command prompt, activate virtual environment and go to Scrapy project folder inside ai <code>/ai/webscraping_0</code></li>
   <li>Run: <code>scrapy crawl hackernews_scraper</code></li>
   <li>Observe Magic.</li>
   <li>Open Browser, go to <code>127.0.0.1:8000/admin</code></li>
