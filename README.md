@@ -10,9 +10,15 @@ To use this,
   <li>Create a virtual environment.</li>
   <li>Activate virtual environment.</li>
   <li>Install requirements.</li>
-  <li>Go to Scrapy project folder.</li>
+  <li>Goto ai Folder.</li>
+  <li>Run following commands:
+    <p>
+      `python manage.py makemigrations` <br>
+      `python manage.py migrate` <br>
+      `python manage.py createsuperuser` and put credentials so you can login into admin account <br>
+      `python manage.py runserver` to start Django server </p></li>
+  <li>Open another command prompt, activate virtual environment and go to Scrapy project folder inside ai (/ai/webscraping_0).</li>
   <li>Run: `scrapy crawl hackernews_scraper`</li>
-  <li>Observe Magic</li>
+  <li>Observe Magic.</li>
+  <li>Open Browser, go to 127.0.0.1:8000/admin</li>
 </ol>
-
-Django project is not uploaded yet because I am making some changes into it in order to integrate a machine learning module for prediction (keep tuning on more news of prediction about..).
