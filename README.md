@@ -13,7 +13,7 @@ To use this,
   <li>Goto ai Folder.</li>
   <li>Run following commands:
     <p>
-      `python manage.py makemigrations` <br>
+      <code>python manage.py makemigrations</code> <br>
       `python manage.py migrate` <br>
       `python manage.py createsuperuser` and put credentials so you can login into admin account <br>
       `python manage.py runserver` to start Django server </p></li>
