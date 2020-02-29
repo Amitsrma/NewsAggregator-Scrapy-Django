@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []#'localhost', '127.0.0.1', 'www.mysite.com']
 
 INSTALLED_APPS = [
     "webscraper",
+    "rest_framework",
     "binary_classifier.apps.BinaryClassifierConfig",
     'django.contrib.admin',
     'django.contrib.auth',
@@ -135,3 +136,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 #                    '/templates/img/',
 #                    '/templates/js/',
 #                    ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20
+}

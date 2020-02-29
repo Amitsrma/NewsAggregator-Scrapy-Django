@@ -17,11 +17,16 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from binary_classifier import views
+from rest_framework import routers
 from webscraper import views
 
 # for loading static files
 from django.conf.urls.static import static
 from django.conf import settings
+
+router = routers.DefaultRouter()
+router.register(r'all_pages', views.ScrapedInfoViewSet, basename='ScraperInformation')
+
 
 urlpatterns = [
 #    path('/', admin.site.urls),
@@ -30,6 +35,8 @@ urlpatterns = [
         name='home'),
     path('binary_classifier/',include('binary_classifier.urls')),
     path('webscraper/',include('webscraper.urls')),
+    path('rest/', include(router.urls)),
+    path("rest/api-auth/", include('rest_framework.urls', namespace='rest_framework')),
             ] 
             
 if settings.DEBUG:
