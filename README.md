@@ -25,4 +25,4 @@ To use this,
 </ol>
 
 <h2>Most recent buzz words related to coronavirus updates in word cloud!</h2>
-![alt text](/files/march-11-2020.png)
+![Corona Virus](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/march-11-2020.png)
