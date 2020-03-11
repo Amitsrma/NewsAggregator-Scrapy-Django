@@ -23,3 +23,6 @@ To use this,
   <li>Open Browser, go to <code>127.0.0.1:8000/admin</code></li>
   <li>Login and goto ScrapyInformation. It is where you will see all the scraped information.</li>
 </ol>
+
+<h2>Most recent buzz words related to coronavirus updates in word cloud!</h2>
+![alt text](files/march-11-2020.png)
