@@ -24,5 +24,7 @@ To use this,
   <li>Login and goto ScrapyInformation. It is where you will see all the scraped information.</li>
 </ol>
 
-<h2>Most recent buzz words related to coronavirus updates in word cloud!</h2>
+<h2>Coronavirus buzzwords in word cloud!</h2>
+#6:00 AM on March 11
+
 ![Corona Virus](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/march-11-2020.png)
