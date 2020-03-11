@@ -26,4 +26,6 @@ To use this,
 <br>
 <h2>Most recent buzz words related to coronavirus updates in word cloud!</h2>
 ![Corona Virus](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/march-11-2020.png)
+
+
 ![alt text](https://raw.githubusercontent.com/Amitsrma/Faces-In-Wild/master/FlowChart.png)
