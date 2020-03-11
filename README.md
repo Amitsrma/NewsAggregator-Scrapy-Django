@@ -28,3 +28,7 @@ To use this,
 #6:00 AM on March 11
 
 ![Corona Virus](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/march-11-2020.png)
+<br>
+Results are based on most recent (within 36 hours of above time) news headlines. It is evident from the words that most of the concern still is about transmission. I removed some common words, like coronavirus, ncovid-19, cases, outbreak, first because they seem to provide lower value to outcome.<br>
+As the outbreak is getting severe, economic impact of virus is felt. World economy is in shambles due to restriction in movements. It also shows effect on schools, community and women. International women's day was just around the corner and most of the events were affected due to corona virus. <br>
+There is also discussion about evolution of coronavirus, trnasmission through animals, seafood, 
