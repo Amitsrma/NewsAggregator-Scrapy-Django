@@ -23,6 +23,7 @@ To use this,
   <li>Open Browser, go to <code>127.0.0.1:8000/admin</code></li>
   <li>Login and goto ScrapyInformation. It is where you will see all the scraped information.</li>
 </ol>
-
+<br>
 <h2>Most recent buzz words related to coronavirus updates in word cloud!</h2>
 ![Corona Virus](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/march-11-2020.png)
+![alt text](https://raw.githubusercontent.com/Amitsrma/Faces-In-Wild/master/FlowChart.png)
