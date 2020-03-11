@@ -26,4 +26,5 @@ To use this,
 <br>
 <h2>Coronavirus buzzwords in word cloud!</h2>
 # 6:00 AM on March 11
-![Corona Virus](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/march-11-2020.png)
+
+![alt text](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/march-11-2020.png)
