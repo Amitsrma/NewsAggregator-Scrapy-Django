@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for webscraping_0 project
+# Scrapy settings for googlenews_scraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -23,15 +23,15 @@ IMAGES_STORE = MEDIA_ROOT
 
 DOWNLOAD_DELAY = 3
 
-BOT_NAME = 'webscraping_0'
 
-SPIDER_MODULES = ['webscraping_0.spiders']
-NEWSPIDER_MODULE = 'webscraping_0.spiders'
+BOT_NAME = 'googlenews_scraper'
 
-DEPTH_LIMIT = 14
+SPIDER_MODULES = ['googlenews_scraper.spiders']
+NEWSPIDER_MODULE = 'googlenews_scraper.spiders'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'webscraping_0 (+http://www.yourdomain.com)'
+#USER_AGENT = 'googlenews_scraper (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -62,13 +62,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'webscraping_0.middlewares.Webscraping0SpiderMiddleware': 543,
+#    'googlenews_scraper.middlewares.GooglenewsScraperSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'webscraping_0.middlewares.Webscraping0DownloaderMiddleware': 543,
+#    'googlenews_scraper.middlewares.GooglenewsScraperDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -79,9 +79,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'webscraping_0.pipelines.Webscraping0Pipeline': 300,
-}
+#ITEM_PIPELINES = {
+#    'googlenews_scraper.pipelines.GooglenewsScraperPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

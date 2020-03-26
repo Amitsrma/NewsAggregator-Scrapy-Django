@@ -7,28 +7,26 @@
 #from webscraper.models import ScraperInformation
 from uuid import uuid4
 from webscraper.models import ScraperInformation
-#from spiders.hackernews_scraper import HackernewsScraperSpider
+from urllib.parse import urlparse
+from webscraping_0.spiders import *
 
 class Webscraping0Pipeline(object):
     def process_item(self, item, spider):
-        id_ = item.get('unique_id')
-        title_ = item.get('title')
-        link_ = item.get('link')
+#        if spider.name == "hackernews_scraper":
+            id_ = item.get('unique_id')
+            title_ = item.get('title')
+            link_check = urlparse(item.get('link')) # checking if the input is page number
+            if link_check.netloc != "":
+                link_ = item.get('link')
+            else:
+                return "Contains Page Number Information."
 
-        links = ScraperInformation.objects.filter(link=link_)
-        if len(links) == 0:
-            ScraperInformation.objects.create(
-            unique_id = id_,
-            title = title_,
-            link = link_,
-            )
-            return item
-#        zipped_items = zip(item.get('title'),item.get('link'))
-#        for an_item in zipped_items:
-#            ScraperInformation.objects.create(
-#                unique_id = str(uuid4()),
-#                title = an_item[0],
-#                link = an_item[1],
-#            )
-#        sc.save()
-        return False
+            links = ScraperInformation.objects.filter(link=link_)
+            if len(links) == 0:
+                a_content = ScraperInformation()
+                a_content.unique_id = id_
+                a_content.title = title_
+                a_content.link = link_
+                a_content.save()
+                return item
+            return "\n{} link already exists.\n".format(link_)
