@@ -23,18 +23,10 @@ class Webscraping0Pipeline(object):
 
             links = ScraperInformation.objects.filter(link=link_)
             if len(links) == 0:
-#                ScraperInformation().objects.create(
-#                unique_id = id_,
-#                title = title_,
-#                link = link_,
-#                )
                 a_content = ScraperInformation()
                 a_content.unique_id = id_
                 a_content.title = title_
                 a_content.link = link_
                 a_content.save()
                 return item
-            return False
-        # for hackernews_50pages scraper
-#        elif spider.name == "hackernews_50pages":
-#            return item
+            return "\n{} link already exists.\n".format(link_)

@@ -23,7 +23,7 @@ except HaltException:
     process_1 = CrawlerProcess(get_project_settings())
     scheduler = TwistedScheduler()
     #scheduler.add_job(process.crawl, args=[Hackernews50pagesSpider])
-    scheduler.add_job(process_1.crawl,'interval', seconds=10, args=[HackernewsScraperSpider])
+    scheduler.add_job(process_1.crawl,'interval', seconds=30, args=[HackernewsScraperSpider])
 
     scheduler.start()
     process_1.start(False)

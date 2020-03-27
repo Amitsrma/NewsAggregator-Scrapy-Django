@@ -22,16 +22,16 @@ from webscraper import views
 
 # for loading static files
 from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 
 router = routers.DefaultRouter()
 router.register(r'all_pages', views.ScrapedInfoViewSet, basename='ScraperInformation')
 
-
 urlpatterns = [
 #    path('/', admin.site.urls),
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html'),
+    path('', TemplateView.as_view(template_name='index_original.html'),
         name='home'),
     path('binary_classifier/',include('binary_classifier.urls')),
     path('webscraper/',include('webscraper.urls')),

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ScraperInformation, newsText
+from .models import ScraperInformation, googleNewsHeadlineCOV
 
 # Register your models here.
 
@@ -8,6 +8,6 @@ class ScraperInformationAdmin(admin.ModelAdmin):
     list_display = ('unique_id','title','link')
 
 
-@admin.register(newsText)
-class newsTextAdmin(admin.ModelAdmin):
-    list_display = ("unique_id","news_text")
+@admin.register(googleNewsHeadlineCOV)
+class googleNewsHeadlineCOVAdmin(admin.ModelAdmin):
+    list_display = ('source_name','author_name','title','link','published_date')
