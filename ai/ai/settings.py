@@ -119,7 +119,7 @@ USE_TZ = True
 # Media Files
 MEDIA_URL = "/media/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR,"media/")
+MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 
 
 # Static files (CSS, JavaScript, Images)
@@ -131,11 +131,10 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-#STATICFILES_DIRS = [#'F:/Study/machine_learning_server/ai/templates/static',
-#                    '/templates/fonts/',
+STATICFILES_DIRS = ['/templates/fonts/',
 #                    '/templates/img/',
 #                    '/templates/js/',
-#                    ]
+                    ]
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
