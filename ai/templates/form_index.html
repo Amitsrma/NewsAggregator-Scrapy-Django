@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+<title>Keyword Page</title>
+</head>
+<body>
+
+<form method="POST">
+{% csrf_token %}
+    <img src="{% static 'img/works-area-images.jpg' %}", alt="image">
+    <br>
+    <p>
+    <label for="your_name">Your name: </label>
+    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+    {{form.as_p}}
+    </p>
+    <p>
+    <label for="email">Email Address: </label>
+    <input id="email" type="email" name="email" value="{{ email }}">
+    {{form.as_p}}
+    </p>
+    <p>
+    <label for="keyword">Keyword: </label>
+    <input id="keyword" type="text" name="keyword" value="{{ keyword }}">
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+    </p>
+</form>
+</body>
+</html>
