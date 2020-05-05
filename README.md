@@ -24,6 +24,16 @@ To use this,
   <li>Login and goto ScrapyInformation. It is where you will see all the scraped information.</li>
 </ol>
 <br>
+<h3>Some of the urls are:</h3>
+<ol>
+  <li><b>Json response of all the websites:</b>http://127.0.0.1:8000/webscraper/netlocs</li>
+  <li><b>REST API:</b>http://127.0.0.1:8000/rest</li>
+  <li><b>Takes in keyword and shows news related to it:</b>http://127.0.0.1:8000/webscraper/show-word-plot</li>
+</ol>
+Here is the results page of #3<br>
+
+![Results Page](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/Results_page.PNG)
+<br>
 <h2>Coronavirus buzzwords in word cloud!</h2>
 #6:00 AM on March 11
 
