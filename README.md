@@ -35,6 +35,12 @@ Here is the results page of #3<br>
 ![Results Page](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/Results_page.PNG)
 <br>
 <h2>Coronavirus buzzwords in word cloud!</h2>
+#2:00 PM on May 05
+
+!![Corona Virus](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/May%205%202020.PNG)
+<br>
+We can see the discussion about remdesivir, a potential drug for coronavirus and research around search for the drugs for virus; words also suggest ventilator; antibody discovery and initiatives from bill gates to help in fight against virus.
+
 #6:00 AM on March 11
 
 ![Corona Virus](https://raw.githubusercontent.com/Amitsrma/Scrapy-Django-NewsScraper/master/files/march-11-2020.png)
