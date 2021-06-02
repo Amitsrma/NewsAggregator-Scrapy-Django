@@ -58,7 +58,7 @@ tornado==6.0.4
 tqdm==4.43.0
 Twisted==19.10.0
 tzlocal==2.0.0
-urllib3==1.25.8
+urllib3==1.26.5
 w3lib==1.21.0
 wordcloud==1.6.0
 zope.interface==4.7.1
