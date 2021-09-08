@@ -27,7 +27,7 @@ numpy==1.17.4
 packaging==20.3
 pandas==0.25.3
 parsel==1.5.2
-Pillow==7.0.0
+Pillow==8.3.2
 plotly==4.5.4
 Protego==0.1.16
 pyasn1==0.4.8
