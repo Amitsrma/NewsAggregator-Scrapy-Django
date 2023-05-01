@@ -13,7 +13,6 @@ class HackernewsScraperSpider(scrapy.Spider):
     start_urls = ['https://news.ycombinator.com/']
 
     def parse(self, response):
-        print("\n\tPROCESSING\n\t\tTHE\n\t\t   WEBSITE")
         post_links = response.xpath("//a[@class='storylink']/@href").extract()
         post_titles = response.css("a.storylink::text").extract()
         

@@ -2,10 +2,15 @@ from uuid import uuid4
 from urllib.parse import urlparse
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
-#from django.views.decorators.csrf import csrf_exempt
-from .models import ScraperInformation
+from nltk import FreqDist
+from pandas import DataFrame
+from bokeh.plotting import figure
+from bokeh.embed import components
+from bokeh.models import LassoSelectTool, WheelZoomTool, ColumnDataSource
+from bokeh.palettes import Spectral6
 
-#for information from forms
+
+from .models import ScraperInformation
 from .forms import KeywordForm
 
 #for REST API
@@ -16,12 +21,6 @@ class ScrapedInfoViewSet(viewsets.ModelViewSet):
     queryset = ScraperInformation.objects.all()#.order_by("title")
     serializer_class = ScrapedInformationSerializer
 
-# BOKEH TEST
-# BOKEH RUNS!
-from bokeh.plotting import figure
-from bokeh.embed import components
-from bokeh.models import LassoSelectTool, WheelZoomTool, ColumnDataSource
-from bokeh.palettes import Spectral6
 
 def bokeh_test_plot(request):
     lang = ['Python', 'JavaScript', 'C#', 'PHP', 'C++', 'Java']
@@ -97,10 +96,6 @@ def tokenize_sentences(list_of_text, exclude_list=[]) -> list:
         tokenized_text.extend(checker)
     return tokenized_text
 
-from nltk import FreqDist
-from pandas import DataFrame
-def tokenizer_():
-    pass
 
 def top_n_words(frequency,n):
     top_n={}
@@ -130,8 +125,6 @@ def word_cloud(request):
                                 exclude_list=to_exclude))
 
         filtered_titles = top_n_words(FreqDist(filtered_titles),30)
-#        print("\n\n",filtered_titles,"\n\n")
-        #fig = go.Figure()
 
         plot_div = plot([go.Bar(
             x=list(filtered_titles.keys()),
@@ -146,20 +139,8 @@ def word_cloud(request):
                                                             'scraperinformation':scraperinformation,
                                                             'keyword':keyword})
 
-        #from wordcloud import WordCloud
-        #import matplotlib.pyplot as plt
-        
-        # Create the wordcloud object
-        #wordcloud = WordCloud(width=1200, height=1200, margin=0).generate(filtered_titles)
-        
-        # Display the generated image:
-        #plt.imshow(wordcloud, interpolation='gaussian')
-        #plt.axis("off")
-        #plt.margins(x=0, y=0)
-        #plt.savefig("fig.png")
-        #return HttpResponse((filtered_titles))
-
     return HttpResponse("Undefined Page!")
+
 
 def index(request):
     all_scraper_objects = ScraperInformation.objects.all()
@@ -171,6 +152,7 @@ def index(request):
 
 def index_(request):
     return render(request, "base.html")#, context={'plot_div': plot_div})
+
 
 # API for the websites scrped and how many times they occured
 def showNetlocs(request):
@@ -187,10 +169,9 @@ def showNetlocs(request):
     return JsonResponse(netlocs)
 
 
+
 def are_there_words(string_to_check, scraperInformation_title, single_word = True):
-#    string_to_check = [i.lower() for i in string_to_check]
     scraperInformation_title = scraperInformation_title.lower()
-    #print("In The are_there_words Function:",string_to_check)
     if single_word:
         if string_to_check in scraperInformation_title:
             return True
@@ -201,7 +182,7 @@ def are_there_words(string_to_check, scraperInformation_title, single_word = Tru
         for word in string_to_check:
             if word in scraperInformation_title:
                 out += 1
-        if out > 0:#= len(string_to_check)-1 and len(string_to_check) > 2:
+        if out > 0:
             return True
         else:
             return False
@@ -226,4 +207,3 @@ def getNews(request, string_to_check):
             if are_there_words(string_to_check, an_object.title, single_word=False):
                 items[an_object.link] = an_object.title
         return JsonResponse(items)
-#    return JsonResponse({'test':"pass"})
